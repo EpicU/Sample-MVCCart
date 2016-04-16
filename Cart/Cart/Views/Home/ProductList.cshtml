@@ -1,0 +1,33 @@
+﻿@model ProductListViewModel
+@{
+    ViewBag.Title = "Products";
+    var page = Convert.ToInt32(ViewContext.RouteData.Values["page"]);
+    var count = Convert.ToInt32(ViewContext.RouteData.Values["count"]);
+}
+
+<h2>Products</h2>
+
+<div class="container">
+
+    @using (Html.BeginForm())
+    {
+        <input type="number" name="Quantity" />
+        @Html.TextBoxFor(c => c.FirstName)
+        @Html.TextBoxFor(c => c.FeaturedProduct.Name)
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    }
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+    <a href="@Url.Action("ProductList", "Home", new { page = page + 1, count = count })" class="btn btn-default">Next</a>
+
+    @Html.DisplayFor(m => m.Products)
+
+</div>

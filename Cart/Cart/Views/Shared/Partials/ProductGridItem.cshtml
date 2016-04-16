@@ -1,0 +1,15 @@
+﻿@model Cart.Models.Product
+
+<div class="thumbnail">
+    <img src="http://placehold.it/650x200&text=Galaxy S5" class="img-responsive">
+    <div class="caption">
+        <h4>
+            @Model.Name
+            <small>@Model.Price.ToString("C")</small>
+        </h4>
+        <p>@Model.Description</p>
+        <div class="text-center">
+            <a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-shopping-cart"></span> Buy</a>
+        </div>
+    </div>
+</div>

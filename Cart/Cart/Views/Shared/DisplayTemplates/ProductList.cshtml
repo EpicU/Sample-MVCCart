@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Product>
+
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-sm-4">
+            @Html.Partial("~/Views/Shared/Partials/ProductGridItem.cshtml", product)
+        </div>
+    }
+</div>
+
